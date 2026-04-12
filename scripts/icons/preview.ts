@@ -36,7 +36,7 @@ try {
             }
             .container {
               color: ${flavorColors.text};
-              background-color: ${flavorColors.overlay1};
+              background-color: ${flavorColors.base};
               width: 1500px;
               display: flex;
               flex-direction: column;

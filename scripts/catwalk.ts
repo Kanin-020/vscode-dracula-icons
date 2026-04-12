@@ -36,7 +36,7 @@ function generateHtml(flavor: FlavorName) {
       <style>
         body {
           color: ${flavorColors.text};
-          background-color: ${flavorColors.overlay1};
+          background-color: ${flavorColors.base};
         }
         .icon {
           width: 32px;
