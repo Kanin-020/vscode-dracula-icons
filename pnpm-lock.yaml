@@ -11,9 +11,6 @@ importers:
       dotenv:
         specifier: ^17.4.1
         version: 17.4.1
-      sharp:
-        specifier: ^0.34.5
-        version: 0.34.5
     devDependencies:
       '@actions/core':
         specifier: ^1.11.1
@@ -57,6 +54,9 @@ importers:
       puppeteer:
         specifier: ^24.24.0
         version: 24.24.0(typescript@5.9.3)
+      sharp:
+        specifier: ^0.34.5
+        version: 0.34.5
       simple-git-hooks:
         specifier: ^2.13.1
         version: 2.13.1

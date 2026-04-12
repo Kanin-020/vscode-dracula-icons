@@ -109,6 +109,36 @@
         "id": "dracula-pro-alucard-icons",
         "label": "Dracula Pro (Alucard)",
         "path": "./dist/draculaProAlucard/theme.json"
+      },
+      {
+        "id": "dracula-pro-blade-icons",
+        "label": "Dracula Pro (Blade)",
+        "path": "./dist/draculaProBlade/theme.json"
+      },
+      {
+        "id": "dracula-pro-buffy-icons",
+        "label": "Dracula Pro (Buffy)",
+        "path": "./dist/draculaProBuffy/theme.json"
+      },
+      {
+        "id": "dracula-pro-lincoln-icons",
+        "label": "Dracula Pro (Lincoln)",
+        "path": "./dist/draculaProLincoln/theme.json"
+      },
+      {
+        "id": "dracula-pro-morbius-icons",
+        "label": "Dracula Pro (Morbius)",
+        "path": "./dist/draculaProMorbius/theme.json"
+      },
+      {
+        "id": "dracula-pro-morbius-icons",
+        "label": "Dracula Pro (Morbius)",
+        "path": "./dist/draculaProMorbius/theme.json"
+      },
+      {
+        "id": "dracula-pro-van-helsing-icons",
+        "label": "Dracula Pro (Van Helsing)",
+        "path": "./dist/draculaProVanHelsing/theme.json"
       }
     ]
   },
@@ -127,8 +157,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "dotenv": "^17.4.1",
-    "sharp": "^0.34.5"
+    "dotenv": "^17.4.1"
   },
   "devDependencies": {
     "@actions/core": "^1.11.1",
@@ -145,6 +174,7 @@
     "lint-staged": "^16.2.4",
     "lookpath": "^1.2.3",
     "puppeteer": "^24.24.0",
+    "sharp": "^0.34.5",
     "simple-git-hooks": "^2.13.1",
     "tsup": "^8.5.0",
     "tsx": "^4.20.6",

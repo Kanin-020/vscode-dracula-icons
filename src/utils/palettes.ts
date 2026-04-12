@@ -1,66 +1,40 @@
-import process from 'node:process'
+import type { ColorName } from '~/types/colorName'
 
+import process from 'node:process'
 import { config } from 'dotenv'
+import { Dracula } from '~/enums/dracula'
+import { DraculaPalettes } from '~/enums/draculaPalettes'
 
 config({ path: '.env' })
 
-export type FlavorName = 'dracula' | 'draculaPro' | 'draculaProBlade' | 'draculaProBuffy' | 'draculaProLincoln' | 'draculaProMorbius' | 'draculaProVanHelsing' | 'draculaProAlucard'
-export type ColorName
-  = | 'rosewater'
-    | 'flamingo'
-    | 'pink'
-    | 'mauve'
-    | 'red'
-    | 'maroon'
-    | 'peach'
-    | 'yellow'
-    | 'green'
-    | 'teal'
-    | 'sky'
-    | 'sapphire'
-    | 'blue'
-    | 'lavender'
-    | 'text'
-    | 'subtext1'
-    | 'subtext0'
-    | 'overlay2'
-    | 'overlay1'
-    | 'overlay0'
-    | 'surface2'
-    | 'surface1'
-    | 'surface0'
-    | 'base'
-    | 'mantle'
-    | 'crust'
-
 // Dracula original
 const dracula: Record<ColorName, string> = {
-  rosewater: '#FF79C6',
-  flamingo: '#FF79C6',
-  pink: '#FF79C6',
-  mauve: '#BD93F9',
-  red: '#FF5555',
-  maroon: '#FF5555',
-  peach: '#FFB86C',
-  yellow: '#F1FA8C',
-  green: '#50FA7B',
-  teal: '#8BE9FD',
-  sky: '#8BE9FD',
-  sapphire: '#8BE9FD',
-  blue: '#8BE9FD',
-  lavender: '#8BE9FD',
-  text: '#F8F8F2', // FOREGROUND
-  subtext1: '#F8F8F2',
-  subtext0: '#F8F8F2',
-  overlay2: '#44475A', // SELECTION
-  overlay1: '#44475A',
-  overlay0: '#44475A',
-  surface2: '#44475A',
-  surface1: '#44475A',
-  surface0: '#44475A',
-  base: '#282A36', // BACKGROUND
-  mantle: '#282A36',
-  crust: '#282A36',
+  rosewater: Dracula.PINK,
+  flamingo: Dracula.PINK,
+  pink: Dracula.PINK,
+  mauve: Dracula.PURPLE,
+  red: Dracula.RED,
+  maroon: Dracula.RED,
+  peach: Dracula.ORANGE,
+  yellow: Dracula.YELLOW,
+  green: Dracula.GREEN,
+  teal: Dracula.CYAN,
+  sky: Dracula.CYAN,
+  sapphire: Dracula.CYAN,
+  blue: Dracula.CYAN,
+  lavender: Dracula.CYAN,
+  text: Dracula.FOREGROUND,
+  subtext1: Dracula.FOREGROUND,
+  subtext0: Dracula.FOREGROUND,
+  overlay2: Dracula.COMMENT,
+  overlay1: Dracula.COMMENT,
+  overlay0: Dracula.COMMENT,
+  surface2: Dracula.SELECTION,
+  surface1: Dracula.SELECTION,
+  surface0: Dracula.SELECTION,
+  base: Dracula.BACKGROUND,
+  mantle: Dracula.BACKGROUND,
+  crust: Dracula.BACKGROUND,
 }
 
 // Dracula Pro
@@ -82,9 +56,9 @@ const draculaPro: Record<ColorName, string | undefined> = {
   text: process.env.PRO_FOREGROUND,
   subtext1: process.env.PRO_FOREGROUND,
   subtext0: process.env.PRO_FOREGROUND,
-  overlay2: process.env.PRO_SELECTION,
-  overlay1: process.env.PRO_SELECTION,
-  overlay0: process.env.PRO_SELECTION,
+  overlay2: process.env.PRO_COMMENT,
+  overlay1: process.env.PRO_COMMENT,
+  overlay0: process.env.PRO_COMMENT,
   surface2: process.env.PRO_SELECTION,
   surface1: process.env.PRO_SELECTION,
   surface0: process.env.PRO_SELECTION,
@@ -112,9 +86,9 @@ const draculaProBlade: Record<ColorName, string | undefined> = {
   text: process.env.PRO_FOREGROUND,
   subtext1: process.env.PRO_FOREGROUND,
   subtext0: process.env.PRO_FOREGROUND,
-  overlay2: process.env.BLADE_SELECTION,
-  overlay1: process.env.BLADE_SELECTION,
-  overlay0: process.env.BLADE_SELECTION,
+  overlay2: process.env.BLADE_COMMENT,
+  overlay1: process.env.BLADE_COMMENT,
+  overlay0: process.env.BLADE_COMMENT,
   surface2: process.env.BLADE_SELECTION,
   surface1: process.env.BLADE_SELECTION,
   surface0: process.env.BLADE_SELECTION,
@@ -142,9 +116,9 @@ const draculaProBuffy: Record<ColorName, string | undefined> = {
   text: process.env.PRO_FOREGROUND,
   subtext1: process.env.PRO_FOREGROUND,
   subtext0: process.env.PRO_FOREGROUND,
-  overlay2: process.env.BUFFY_SELECTION,
-  overlay1: process.env.BUFFY_SELECTION,
-  overlay0: process.env.BUFFY_SELECTION,
+  overlay2: process.env.BUFFY_COMMENT,
+  overlay1: process.env.BUFFY_COMMENT,
+  overlay0: process.env.BUFFY_COMMENT,
   surface2: process.env.BUFFY_SELECTION,
   surface1: process.env.BUFFY_SELECTION,
   surface0: process.env.BUFFY_SELECTION,
@@ -172,9 +146,9 @@ const draculaProLincoln: Record<ColorName, string | undefined> = {
   text: process.env.PRO_FOREGROUND,
   subtext1: process.env.PRO_FOREGROUND,
   subtext0: process.env.PRO_FOREGROUND,
-  overlay2: process.env.LINCOLN_SELECTION,
-  overlay1: process.env.LINCOLN_SELECTION,
-  overlay0: process.env.LINCOLN_SELECTION,
+  overlay2: process.env.LINCOLN_COMMENT,
+  overlay1: process.env.LINCOLN_COMMENT,
+  overlay0: process.env.LINCOLN_COMMENT,
   surface2: process.env.LINCOLN_SELECTION,
   surface1: process.env.LINCOLN_SELECTION,
   surface0: process.env.LINCOLN_SELECTION,
@@ -202,9 +176,9 @@ const draculaProMorbius: Record<ColorName, string | undefined> = {
   text: process.env.PRO_FOREGROUND,
   subtext1: process.env.PRO_FOREGROUND,
   subtext0: process.env.PRO_FOREGROUND,
-  overlay2: process.env.MORBIUS_SELECTION,
-  overlay1: process.env.MORBIUS_SELECTION,
-  overlay0: process.env.MORBIUS_SELECTION,
+  overlay2: process.env.MORBIUS_COMMENT,
+  overlay1: process.env.MORBIUS_COMMENT,
+  overlay0: process.env.MORBIUS_COMMENT,
   surface2: process.env.MORBIUS_SELECTION,
   surface1: process.env.MORBIUS_SELECTION,
   surface0: process.env.MORBIUS_SELECTION,
@@ -232,9 +206,9 @@ const draculaProVanHelsing: Record<ColorName, string | undefined> = {
   text: process.env.PRO_FOREGROUND,
   subtext1: process.env.PRO_FOREGROUND,
   subtext0: process.env.PRO_FOREGROUND,
-  overlay2: process.env.VAN_HELSING_SELECTION,
-  overlay1: process.env.VAN_HELSING_SELECTION,
-  overlay0: process.env.VAN_HELSING_SELECTION,
+  overlay2: process.env.VAN_HELSING_COMMENT,
+  overlay1: process.env.VAN_HELSING_COMMENT,
+  overlay0: process.env.VAN_HELSING_COMMENT,
   surface2: process.env.VAN_HELSING_SELECTION,
   surface1: process.env.VAN_HELSING_SELECTION,
   surface0: process.env.VAN_HELSING_SELECTION,
@@ -262,9 +236,9 @@ const draculaProAlucard: Record<ColorName, string | undefined> = {
   text: process.env.ALUCARD_FOREGROUND,
   subtext1: process.env.ALUCARD_FOREGROUND,
   subtext0: process.env.ALUCARD_FOREGROUND,
-  overlay2: process.env.ALUCARD_SELECTION,
-  overlay1: process.env.ALUCARD_SELECTION,
-  overlay0: process.env.ALUCARD_SELECTION,
+  overlay2: process.env.ALUCARD_COMMENT,
+  overlay1: process.env.ALUCARD_COMMENT,
+  overlay0: process.env.ALUCARD_COMMENT,
   surface2: process.env.ALUCARD_SELECTION,
   surface1: process.env.ALUCARD_SELECTION,
   surface0: process.env.ALUCARD_SELECTION,
@@ -277,28 +251,28 @@ const draculaProAlucard: Record<ColorName, string | undefined> = {
  * Simplified ColorName/Hexcode palettes
  */
 export const palettes = {
-  'css-variables': Object.entries(dracula).map(([color]) => [
+  [DraculaPalettes.VARIABLES]: Object.entries(dracula).map(([color]) => [
     color,
     `var(--vscode-ctp-${color})`,
   ]) as Array<[ColorName, string]>,
-  'dracula': Object.entries(dracula) as Array<[ColorName, string]>,
-  'draculaPro': Object.entries(draculaPro) as Array<[ColorName, string]>,
-  'draculaProBlade': Object.entries(draculaProBlade) as Array<[ColorName, string]>,
-  'draculaProBuffy': Object.entries(draculaProBuffy) as Array<[ColorName, string]>,
-  'draculaProLincoln': Object.entries(draculaProLincoln) as Array<[ColorName, string]>,
-  'draculaProMorbius': Object.entries(draculaProMorbius) as Array<[ColorName, string]>,
-  'draculaProVanHelsing': Object.entries(draculaProVanHelsing) as Array<[ColorName, string]>,
-  'draculaProAlucard': Object.entries(draculaProAlucard) as Array<[ColorName, string]>,
+  [DraculaPalettes.Dracula]: Object.entries(dracula) as Array<[ColorName, string]>,
+  [DraculaPalettes.DraculaPro]: Object.entries(draculaPro) as Array<[ColorName, string]>,
+  [DraculaPalettes.DraculaProBlade]: Object.entries(draculaProBlade) as Array<[ColorName, string]>,
+  [DraculaPalettes.DraculaProBuffy]: Object.entries(draculaProBuffy) as Array<[ColorName, string]>,
+  [DraculaPalettes.DraculaProLincoln]: Object.entries(draculaProLincoln) as Array<[ColorName, string]>,
+  [DraculaPalettes.DraculaProMorbius]: Object.entries(draculaProMorbius) as Array<[ColorName, string]>,
+  [DraculaPalettes.DraculaProVanHelsing]: Object.entries(draculaProVanHelsing) as Array<[ColorName, string]>,
+  [DraculaPalettes.DraculaProAlucard]: Object.entries(draculaProAlucard) as Array<[ColorName, string]>,
 }
 
 export const folders = [
-  'css-variables',
-  'dracula',
-  'draculaPro',
-  'draculaProBlade',
-  'draculaProBuffy',
-  'draculaProLincoln',
-  'draculaProMorbius',
-  'draculaProVanHelsing',
-  'draculaProAlucard',
-] satisfies Array<keyof typeof palettes>
+  DraculaPalettes.VARIABLES,
+  DraculaPalettes.Dracula,
+  DraculaPalettes.DraculaPro,
+  DraculaPalettes.DraculaProBlade,
+  DraculaPalettes.DraculaProBuffy,
+  DraculaPalettes.DraculaProLincoln,
+  DraculaPalettes.DraculaProMorbius,
+  DraculaPalettes.DraculaProVanHelsing,
+  DraculaPalettes.DraculaProAlucard,
+] satisfies Array<DraculaPalettes>
