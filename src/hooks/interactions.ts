@@ -6,7 +6,7 @@ import { commands, Uri, window, workspace } from 'vscode'
  * Inform the user changes happened and reload is required
  */
 export async function promptToReload() {
-  const message = `Catppuccin Icons: Theme changed - Reload required.`
+  const message = `Dracula Icons: Theme changed - Reload required.`
   const action = 'Reload window'
   await window.showInformationMessage(message, action).then(async (selectedAction) => {
     if (selectedAction === action)

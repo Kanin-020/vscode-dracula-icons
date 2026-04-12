@@ -1,29 +1,30 @@
 {
-  "publisher": "Catppuccin",
-  "name": "catppuccin-vsc-icons",
-  "displayName": "Catppuccin Icons for VSCode",
+  "publisher": "kanin-020",
+  "name": "dracula-icons",
+  "displayName": "Dracula Icons",
   "type": "module",
-  "version": "1.26.0",
+  "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@10.18.2",
-  "description": "🦊 Soothing pastel icon theme for VSCode",
-  "author": "prazdevs",
+  "description": "🦇 Dark icon theme for VSCode",
+  "author": "kanin",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/catppuccin/vscode-icons"
+    "url": "https://github.com/Kanin-020/vscode-dracula-icons"
   },
-  "bugs": {
-    "url": "https://github.com/catppuccin/vscode-icons/issues"
-  },
-  "sponsor": {
-    "url": "https://opencollective.com/catppuccin"
-  },
-  "keywords": [
-    "catppuccin",
+ "keywords": [
     "theme",
+    "themes",
     "fancy",
-    "pastel-colors",
+    "neon-colors",
+    "dark-colors",
+    "pixel perfect",
+    "perfect pixel",
+    "line icons",
+    "dracula",
+    "dracula theme",
+    "dracula icons",
     "vscode",
     "vscode-theme",
     "vscode-icons",
@@ -48,39 +49,39 @@
   ],
   "contributes": {
     "configuration": {
-      "title": "Catppuccin Icons",
+      "title": "Dracula Icons",
       "properties": {
-        "catppuccin-icons.hidesExplorerArrows": {
+        "dracula-icons.hidesExplorerArrows": {
           "type": "boolean",
           "default": false,
           "description": "Hides arrows next to folders in the explorer."
         },
-        "catppuccin-icons.specificFolders": {
+        "dracula-icons.specificFolders": {
           "type": "boolean",
           "default": true,
           "description": "Display specific folder icons. Disable to only use default folder icon."
         },
-        "catppuccin-icons.monochrome": {
+        "dracula-icons.monochrome": {
           "type": "boolean",
           "default": false,
           "description": "Only use Text color for icons."
         },
-        "catppuccin-icons.associations.languages": {
+        "dracula-icons.associations.languages": {
           "type": "object",
           "default": {},
           "description": "Custom languageId/icon associations."
         },
-        "catppuccin-icons.associations.extensions": {
+        "dracula-icons.associations.extensions": {
           "type": "object",
           "default": {},
           "description": "Custom fileExtension/icon associations."
         },
-        "catppuccin-icons.associations.files": {
+        "dracula-icons.associations.files": {
           "type": "object",
           "default": {},
           "description": "Custom fileName/icon associations."
         },
-        "catppuccin-icons.associations.folders": {
+        "dracula-icons.associations.folders": {
           "type": "object",
           "default": {},
           "description": "Custom folderName/icon associations."
@@ -89,30 +90,25 @@
     },
     "commands": [
       {
-        "command": "catppuccin-icons.reset",
-        "title": "Catppuccin Icons: Factory reset settings"
+        "command": "dracula-icons.reset",
+        "title": "Dracula Icons: Factory reset settings"
       }
     ],
     "iconThemes": [
       {
-        "id": "catppuccin-mocha",
-        "label": "Catppuccin Mocha",
-        "path": "./dist/mocha/theme.json"
+        "id": "dracula-icons",
+        "label": "Dracula",
+        "path": "./dist/dracula/theme.json"
       },
       {
-        "id": "catppuccin-latte",
-        "label": "Catppuccin Latte",
-        "path": "./dist/latte/theme.json"
+        "id": "dracula-pro-icons",
+        "label": "Dracula Pro",
+        "path": "./dist/draculaPro/theme.json"
       },
       {
-        "id": "catppuccin-frappe",
-        "label": "Catppuccin Frappé",
-        "path": "./dist/frappe/theme.json"
-      },
-      {
-        "id": "catppuccin-macchiato",
-        "label": "Catppuccin Macchiato",
-        "path": "./dist/macchiato/theme.json"
+        "id": "dracula-pro-alucard-icons",
+        "label": "Dracula Pro (Alucard)",
+        "path": "./dist/draculaProAlucard/theme.json"
       }
     ]
   },
@@ -130,14 +126,18 @@
     "release": "changelogen --release",
     "typecheck": "tsc"
   },
+  "dependencies": {
+    "dotenv": "^17.4.1",
+    "sharp": "^0.34.5"
+  },
   "devDependencies": {
     "@actions/core": "^1.11.1",
     "@antfu/eslint-config": "^5.4.1",
-    "@catppuccin/palette": "^1.7.1",
     "@iconify/tools": "^4.1.4",
     "@types/node": "^24.7.2",
     "@types/vscode": "1.83.0",
     "@vscode/vsce": "^3.6.2",
+    "catwalk": "^0.1.1",
     "changelogen": "^0.6.2",
     "consola": "^3.4.2",
     "defu": "^6.1.4",

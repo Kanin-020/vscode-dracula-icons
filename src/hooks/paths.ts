@@ -38,22 +38,12 @@ export function getUnflavoredPath(context: ExtensionContext) {
  */
 export function getThemePaths(context: ExtensionContext): ThemePaths {
   const root = getRootPath(context)
-  return {
-    frappe: {
-      icons: Uri.joinPath(root, 'frappe', 'icons'),
-      theme: Uri.joinPath(root, 'frappe', 'theme.json'),
+  const flavors = ['dracula', 'draculaPro', 'draculaProAlucard'] as const
+  return Object.fromEntries(flavors.map(flavor => [
+    flavor,
+    {
+      icons: Uri.joinPath(root, flavor, 'icons'),
+      theme: Uri.joinPath(root, flavor, 'theme.json'),
     },
-    latte: {
-      icons: Uri.joinPath(root, 'latte', 'icons'),
-      theme: Uri.joinPath(root, 'latte', 'theme.json'),
-    },
-    macchiato: {
-      icons: Uri.joinPath(root, 'macchiato', 'icons'),
-      theme: Uri.joinPath(root, 'macchiato', 'theme.json'),
-    },
-    mocha: {
-      icons: Uri.joinPath(root, 'mocha', 'icons'),
-      theme: Uri.joinPath(root, 'mocha', 'theme.json'),
-    },
-  }
+  ])) as ThemePaths
 }

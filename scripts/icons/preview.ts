@@ -2,19 +2,19 @@
  * Generates previews (.webp) for all flavors.
  */
 
-import type { FlavorName } from '@catppuccin/palette'
+import type { FlavorName } from '~/utils/palettes'
 import { mkdtemp, readdir, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join, resolve, sep } from 'node:path'
 import { exit } from 'node:process'
-import { flavorEntries, flavors } from '@catppuccin/palette'
 import { consola } from 'consola'
 import { launch } from 'puppeteer'
+import { folders, palettes } from '~/utils/palettes'
 
 try {
   consola.info('Generating previews...')
 
-  const allIcons = await readdir('icons/latte')
+  const allIcons = await readdir('icons/dracula')
   const fileIcons = allIcons.filter(i => !i.startsWith('folder_') && !i.startsWith('_'))
   const folderIcons = allIcons.filter(i => i.startsWith('folder_') && !i.endsWith('_open.svg'))
 
@@ -23,6 +23,7 @@ try {
   }
 
   function generateHtml(flavor: FlavorName) {
+    const flavorColors = Object.fromEntries(palettes[flavor])
     return `
       <html>
         <head>
@@ -34,8 +35,8 @@ try {
               margin: 0;
             }
             .container {
-              color: ${flavors[flavor].colors.text.hex};
-              background-color: ${flavors[flavor].colors.mantle.hex};
+              color: ${flavorColors.text};
+              background-color: ${flavorColors.overlay1};
               width: 1500px;
               display: flex;
               flex-direction: column;
@@ -89,8 +90,9 @@ try {
   }
 
   const tmp = await mkdtemp(join(tmpdir(), sep))
+  const flavorList = folders.filter(f => f !== 'css-variables') as FlavorName[]
 
-  await Promise.all(flavorEntries.map(async ([flavor]) => {
+  await Promise.all(flavorList.map(async (flavor) => {
     const htmlPath = join(tmp, `${flavor}.html`)
     const screenshotPath = join('assets', `${flavor}.webp`) as `${string}.webp`
     await writeFile(htmlPath, generateHtml(flavor))

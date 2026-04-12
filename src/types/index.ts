@@ -1,5 +1,5 @@
-import type { FlavorName } from '@catppuccin/palette'
 import type { Uri } from 'vscode'
+import type { FlavorName } from '~/utils/palettes'
 
 /**
  * Config interacting with `<flavor>/theme.json` files.

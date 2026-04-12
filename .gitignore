@@ -5,3 +5,7 @@ node_modules/
 *.vsix
 .DS_Store
 .cache
+.env
+icons/*
+!icons/css-variables/
+!icons/css-variables/**

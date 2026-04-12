@@ -5,7 +5,7 @@ import { CONFIG_KEYS, CONFIG_ROOT } from '~/constants'
 import { defaultConfig } from '~/defaults'
 
 /**
- * Get user catppuccin-icons configuration
+ * Get user dracula-icons configuration
  * @returns explicitly set configuration keys
  */
 export function getConfig(): Partial<Config> {
@@ -25,7 +25,7 @@ export function getConfig(): Partial<Config> {
 }
 
 /**
- * Reset catppuccin-icons configuration
+ * Reset dracula-icons configuration
  * Deletes keys from `settings.json`
  */
 export async function resetConfig() {

@@ -11,7 +11,7 @@ export function activate(context: ExtensionContext) {
     workspace.onDidChangeConfiguration((event: ConfigurationChangeEvent) => {
       if (event.affectsConfiguration(CONFIG_ROOT)) {
         window.showErrorMessage(
-          'VSCode Web doesn\'t support advanced Catppuccin Icons options at the moment.',
+          'VSCode Web doesn\'t support advanced Dracula Icons options at the moment.',
         )
       }
     }),

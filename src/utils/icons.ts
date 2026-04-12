@@ -1,8 +1,15 @@
-import type { ColorName, FlavorName } from '@catppuccin/palette'
 import type { IconsConfig } from '~/types'
-import { flavors } from '@catppuccin/palette'
+import type { ColorName, FlavorName } from '~/utils/palettes'
 import defu from 'defu'
 import { defaultConfig } from '~/defaults'
+import { palettes } from '~/utils/palettes'
+
+/**
+ * Get color map for a flavor
+ */
+function getColorMap(flavor: FlavorName): Record<ColorName, string> {
+  return Object.fromEntries(palettes[flavor]) as Record<ColorName, string>
+}
 
 /**
  * Create icon with Text color from `flavor` only
@@ -11,9 +18,10 @@ import { defaultConfig } from '~/defaults'
  * @returns flavored monochrome icon svg
  */
 export function monochromeIcon(svg: string, flavor: FlavorName) {
+  const colors = getColorMap(flavor)
   return svg.replaceAll(
     /var\(--vscode-ctp-\w+\)/g,
-    flavors[flavor].colors.text.hex,
+    colors.text,
   )
 }
 
@@ -24,9 +32,10 @@ export function monochromeIcon(svg: string, flavor: FlavorName) {
  * @returns flavored default icon svg
  */
 export function defaultIcon(svg: string, flavor: FlavorName) {
+  const colors = getColorMap(flavor)
   return svg.replaceAll(
     /var\(--vscode-ctp-\w+\)/g,
-    v => flavors[flavor].colors[v.slice(17, -1) as ColorName].hex,
+    v => colors[v.slice(17, -1) as ColorName],
   )
 }
 

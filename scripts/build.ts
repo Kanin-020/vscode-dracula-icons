@@ -1,21 +1,18 @@
-/**
- * Build themes and extension.
- */
-
 import { existsSync } from 'node:fs'
-import { cp, readdir, rm, writeFile } from 'node:fs/promises'
+import { cp, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { basename, join } from 'node:path'
 import { env, exit } from 'node:process'
 import { setOutput } from '@actions/core'
-import { flavorEntries } from '@catppuccin/palette'
 import { createVSIX } from '@vscode/vsce'
 import { consola } from 'consola'
 import packageJson from 'package.json' assert { type: 'json' }
 import { build } from 'tsup'
+import { compileIcon } from '~/utils/icons'
+import { folders } from '~/utils/palettes'
 import { compileTheme } from '~/utils/themes'
 
 const DIST = 'dist'
-const flavors = flavorEntries.map(([f]) => f)
+const flavors = folders.filter(f => f !== 'css-variables')
 
 try {
   consola.info('Deleting previous build...')
@@ -32,20 +29,25 @@ catch (error) {
 }
 
 try {
-  consola.info('Copying icon SVGs to dist...')
+  consola.info('Generating flavored icon SVGs to dist...')
 
-  // copy icons to dist
-  await Promise.all(flavors.map(async (f) => {
-    await cp(join('icons', f), join(DIST, f, 'icons'), { recursive: true })
-  }))
-
-  // copy css-vars/unflavored icons to dist
+  const unflavoredIcons = await readdir(join('icons', 'css-variables'))
+  await mkdir(join(DIST, 'unflavored'), { recursive: true })
   await cp(join('icons', 'css-variables'), join(DIST, 'unflavored'), { recursive: true })
 
-  consola.success('Copied icon SVGs to dist.')
+  await Promise.all(flavors.map(async (f) => {
+    const flavorPath = join(DIST, f, 'icons')
+    await mkdir(flavorPath, { recursive: true })
+    await Promise.all(unflavoredIcons.map(async (i) => {
+      const icon = await readFile(join('icons', 'css-variables', i), 'utf8')
+      await writeFile(join(flavorPath, i), compileIcon(icon, f, { monochrome: false }))
+    }))
+  }))
+
+  consola.success('Generated flavored icon SVGs to dist.')
 }
 catch (error) {
-  consola.error('Failed to copy icon SVGs: ', error)
+  consola.error('Failed to generate flavored icon SVGs: ', error)
   exit(1)
 }
 

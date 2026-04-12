@@ -1,11 +1,11 @@
 import type { ExtensionContext } from 'vscode'
-import { flavorEntries } from '@catppuccin/palette'
 import { Uri, window, workspace } from 'vscode'
 import { getConfig } from '~/hooks/configuration'
 import { getIconDefinitions } from '~/hooks/iconDefinitions'
 import { readFile, writeFile, writeJsonFile } from '~/hooks/interactions'
 import { getThemePaths, getUnflavoredPath } from '~/hooks/paths'
 import { compileIcon, hashedSvgPath, iconHash } from '~/utils/icons'
+import { folders } from '~/utils/palettes'
 import { compileTheme } from '~/utils/themes'
 
 /**
@@ -18,7 +18,7 @@ export async function updateThemes(context: ExtensionContext, icons = false) {
   const paths = getThemePaths(context)
   const config = getConfig()
   const hash = iconHash(config)
-  const flavors = flavorEntries.map(([f]) => f)
+  const flavors = folders.filter(f => f !== 'css-variables')
 
   if (icons) {
     const unflavored = getUnflavoredPath(context)

@@ -1,46 +1,42 @@
-/**
- * Generate main preview using Catwalk.
- */
-
-import type { FlavorName } from '@catppuccin/palette'
-import { exec } from 'node:child_process'
+import type { FlavorName } from '~/utils/palettes'
 import { mkdtemp, readdir, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join, resolve, sep } from 'node:path'
 import { exit } from 'node:process'
-import { promisify } from 'node:util'
-import { flavorEntries, flavors } from '@catppuccin/palette'
 import { consola } from 'consola'
-import { lookpath } from 'lookpath'
 import { launch } from 'puppeteer'
-
-if (!await lookpath('catwalk')) {
-  consola.error('Catwalk not installed.')
-  exit(1)
-}
+import sharp from 'sharp'
+import { folders, palettes } from '~/utils/palettes'
 
 const OUT = 'assets/catwalk.webp'
+const HEIGHT = 400
+const WIDTH = 700
 
-const allIcons = await readdir('icons/latte')
+const flavorEntries = folders
+  .filter(f => f !== 'css-variables')
+  .map(f => [f, Object.fromEntries(palettes[f])] as const)
+
+const allIcons = await readdir('icons/dracula')
 const fileIcons = allIcons
   .filter(i => !i.startsWith('folder_') && !i.startsWith('_'))
   .toSorted(() => 0.5 - Math.random())
 
 function generateIcons(flavor: FlavorName) {
   return Array.from({ length: 6 })
-    .fill(fileIcons.map(i => `${resolve(join('icons', flavor, i))}`))
-    .flat()
+    .flatMap(() => fileIcons.map(i => resolve(join('icons', flavor, i))))
 }
 
 function generateHtml(flavor: FlavorName) {
+  const flavorColors = Object.fromEntries(palettes[flavor])
   const icons = generateIcons(flavor)
+
   return `
   <html>
     <head>
       <style>
         body {
-          color: ${flavors[flavor].colors.text.hex};
-          background-color: ${flavors[flavor].colors.mantle.hex};
+          color: ${flavorColors.text};
+          background-color: ${flavorColors.overlay1};
         }
         .icon {
           width: 32px;
@@ -58,7 +54,7 @@ function generateHtml(flavor: FlavorName) {
       </style>
     </head>
     <body>
-    <div class="grid">
+      <div class="grid">
         ${icons.map(i => `<img class="icon" src="${i}">`).join('\n')}
       </div>
     </body>
@@ -67,35 +63,76 @@ function generateHtml(flavor: FlavorName) {
 }
 
 try {
-  consola.info('Generating Catwalk preview...')
+  consola.info('Generating preview...')
 
   const tmp = await mkdtemp(join(tmpdir(), sep))
 
   const images = await Promise.all(flavorEntries.map(async ([flavor]) => {
     const htmlPath = join(tmp, `${flavor}.html`)
     const screenshotPath = join(tmp, `${flavor}.png`) as `${string}.png`
-    await writeFile(htmlPath, generateHtml(flavor))
-    const browser = await launch({
-      args: ['--no-sandbox'],
-    })
+
+    await writeFile(htmlPath, generateHtml(flavor as FlavorName))
+
+    const browser = await launch({ args: ['--no-sandbox'] })
     const page = await browser.newPage()
+
     await page.setViewport({
-      height: 400,
-      width: 700,
+      width: WIDTH,
+      height: HEIGHT,
       deviceScaleFactor: 3,
     })
-    await page.goto(join('file:', htmlPath))
+
+    await page.goto(`file://${htmlPath}`)
     await page.screenshot({ path: screenshotPath })
+
     await browser.close()
     return screenshotPath
   }))
-  await promisify(exec)(`catwalk ${images.join(' ')} --output="${OUT}"`)
+
+  // TODO
+  const SLICE_COUNT = images.length
+  const SLICE_WIDTH = Math.floor(WIDTH / SLICE_COUNT)
+
+  const slices = await Promise.all(
+    images.map((img, i) =>
+      sharp(img)
+        .resize(WIDTH, HEIGHT)
+        .extract({
+          left: i * SLICE_WIDTH,
+          top: 0,
+          width: SLICE_WIDTH,
+          height: HEIGHT,
+        })
+        .toBuffer(),
+    ),
+  )
+
+  const composite = slices.map((input, i) => ({
+    input,
+    top: 0,
+    left: i * SLICE_WIDTH,
+  }))
+
+  const totalWidth = WIDTH
+  const totalHeight = HEIGHT
+
+  await sharp({
+    create: {
+      width: totalWidth,
+      height: totalHeight,
+      channels: 4,
+      background: '#282a36',
+    },
+  })
+    .composite(composite)
+    .webp()
+    .toFile(OUT)
 
   await rm(tmp, { recursive: true })
 
-  consola.success('Catwalk preview generated.')
+  consola.success('Preview generated.')
 }
 catch (error) {
-  consola.error('Catwalk preview generation failed: ', error)
+  consola.error('Preview generation failed: ', error)
   exit(1)
 }
