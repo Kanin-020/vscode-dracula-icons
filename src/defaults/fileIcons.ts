@@ -42,6 +42,9 @@ const fileIcons: FileIcons = {
       'ace',
     ],
   },
+  'advpl': {
+    fileExtensions: ['prw', 'prx', 'ptm', 'tlpp', 'ch'],
+  },
   'alex': {
     fileNames: [
       '.alexrc',
@@ -97,6 +100,11 @@ const fileIcons: FileIcons = {
       'apiblueprint',
     ],
   },
+  'apl': {
+    fileExtensions: [
+      'apl',
+    ],
+  },
   'apollo': {
     fileNames: [
       'apollo.config.js',
@@ -107,6 +115,17 @@ const fileIcons: FileIcons = {
     fileNames: [
       'apple-app-site-association',
       'apple-developer-merchantid-domain-association',
+    ],
+  },
+  'apps-script': {
+    fileExtensions: [
+      'gs',
+    ],
+  },
+  'appveyor': {
+    fileNames: [
+      '.appveyor.yml',
+      'appveyor.yml',
     ],
   },
   'arduino': {
@@ -161,6 +180,11 @@ const fileIcons: FileIcons = {
       'wav',
       'wma',
       'wv',
+    ],
+  },
+  'aurelia': {
+    fileNames: [
+      'aurelia.json',
     ],
   },
   'autohotkey': {

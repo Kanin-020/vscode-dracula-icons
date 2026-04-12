@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+	<path fill="none" stroke="var(--vscode-ctp-rosewater)" stroke-linecap="square" d="M14.1568542,4.46446609 L12.0355339,2.34314575 L2.84314575,11.5355339 L4.96446609,13.6568542 L14.1568542,4.46446609 Z M3.55025253,8 L2.13603897,6.58578644 L0.721825407,8 L2.13603897,9.41421356 L3.55025253,8 Z M7.79289322,13.6568542 L8.5,12.9497475 L9.20710678,13.6568542 L8.5,14.363961 L7.79289322,13.6568542 Z" />
+	<path fill="none" stroke="var(--vscode-ctp-mauve)" stroke-linecap="square" d="M12.0355339,9.41421356 L14.863961,12.2426407 L12.7426407,14.363961 L9.91421356,11.5355339 L12.0355339,9.41421356 Z M9.20710678,2.34314575 L7.79289322,0.928932188 L7.08578644,1.63603897 L8.5,3.05025253 L9.20710678,2.34314575 Z M14.863961,8 L14.1568542,7.29289322 L13.4497475,8 L14.1568542,8.70710678 L14.863961,8 Z" />
+	<path fill="none" stroke="var(--vscode-ctp-red)" stroke-linecap="square" d="M6.111 2.111 6.111 6.111 3.111 6.111 3.111 2.111z" transform="rotate(-45 4.61 4.11)" />
+	<path fill="none" stroke="var(--vscode-ctp-rosewater)" stroke-linejoin="round" d="M.222 5.172 1.222 5.172" transform="rotate(-45 .722 5.172)" />
+	<path fill="none" stroke="var(--vscode-ctp-rosewater)" stroke-linejoin="round" d="M5.879 15.071 6.879 15.071" transform="rotate(-45 6.379 15.071)" />
+</svg>
