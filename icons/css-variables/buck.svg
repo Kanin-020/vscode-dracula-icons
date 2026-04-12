@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+	<g fill="none" fill-rule="evenodd" stroke="var(--vscode-ctp-blue)">
+		<path stroke-linecap="square" d="M3.5 14.5 7.5 11 5 8.5 15.5 8.5 15.5 10.5 11.5 12.5 9.5 14.5M11.75 8.25 8.5 5.5 8.5 2.5" />
+		<path stroke-linecap="square" d="M12.5 2.5 12.5 5 10.541 7M8 8 4.5 4.5 4.5 1.5M.5 1.5.5 4 2.959 6.526 6 6.526" />
+		<path d="M9 10H10V11H9z" />
+	</g>
+</svg>

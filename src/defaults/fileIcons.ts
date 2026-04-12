@@ -187,9 +187,27 @@ const fileIcons: FileIcons = {
       'aurelia.json',
     ],
   },
+  'auto': {
+    fileNames: [
+      '.autorc',
+      'auto.config.js',
+      'auto.config.ts',
+      'auto-config.json',
+      'auto-config.yaml',
+      'auto-config.yml',
+      'auto-config.ts',
+      'auto-config.js',
+    ],
+  },
   'autohotkey': {
     fileExtensions: ['ahk'],
     languageIds: ['ahk'],
+  },
+  'autoit': {
+    fileExtensions: [
+      'au3',
+      'a3x',
+    ],
   },
   'azure-pipelines': {
     fileNames: [
@@ -223,6 +241,12 @@ const fileIcons: FileIcons = {
       '.babel-plugin-macrosrc.yml',
       '.babel-plugin-macrosrc.js',
       'babel-plugin-macros.config.js',
+    ],
+  },
+  'ballerina': {
+    fileExtensions: [
+      'bal',
+      'balx',
     ],
   },
   'bash': {
@@ -302,6 +326,11 @@ const fileIcons: FileIcons = {
       'bitbucket-pipelines.yml',
     ],
   },
+  'bithound': {
+    fileNames: [
+      '.bithoundrc',
+    ],
+  },
   'blink': {
     fileExtensions: ['blink'],
   },
@@ -322,6 +351,11 @@ const fileIcons: FileIcons = {
     fileNames: [
       'browserslist',
       '.browserslistrc',
+    ],
+  },
+  'buck': {
+    fileNames: [
+      '.buckconfig',
     ],
   },
   'bun-lock': {
