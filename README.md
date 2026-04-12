@@ -1,6 +1,6 @@
 <h3 align="center">
-  <img src="assets/iconsvg.svg" width="100" alt="Logo"/><br>
-  <img src="assets/iconsvg.svg" height="30" width="0px"/>
+  <img src="assets/icon.png" width="100" alt="Logo"/><br>
+  <img src="assets/icon.png" height="30" width="0px"/>
     Unofficial. Catppuccin icons + Dracula Theme + Dracula PRO
 </h3>
 
