@@ -3,7 +3,7 @@
   "name": "dracula-icons",
   "displayName": "Dracula Icons",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@10.18.2",
   "description": "🦇 Dark icon theme for VSCode",
