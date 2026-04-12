@@ -9,8 +9,8 @@ import sharp from 'sharp'
 import { folders, palettes } from '~/utils/palettes'
 
 const OUT = 'assets/catwalk.webp'
-const HEIGHT = 400
-const WIDTH = 700
+const HEIGHT = 1200
+const WIDTH = 2100
 
 const flavorEntries = folders
   .filter(f => f !== 'css-variables')
@@ -39,8 +39,8 @@ function generateHtml(flavor: FlavorName) {
           background-color: ${flavorColors.base};
         }
         .icon {
-          width: 32px;
-          height: 32px;
+          width: 96px;
+          height: 96px;
         }
         .grid {
           transform: rotate(-30deg) translate(0%, -50%);
@@ -49,7 +49,7 @@ function generateHtml(flavor: FlavorName) {
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
-          gap: 5px;
+          gap: 10px;
         }
       </style>
     </head>
