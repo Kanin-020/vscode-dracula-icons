@@ -1,5 +1,6 @@
+import type { DraculaPalettes } from '~/enums/draculaPalettes'
 import type { IconsConfig } from '~/types'
-import type { ColorName, FlavorName } from '~/utils/palettes'
+import type { ColorName } from '~/types/colorName'
 import defu from 'defu'
 import { defaultConfig } from '~/defaults'
 import { palettes } from '~/utils/palettes'
@@ -7,7 +8,7 @@ import { palettes } from '~/utils/palettes'
 /**
  * Get color map for a flavor
  */
-function getColorMap(flavor: FlavorName): Record<ColorName, string> {
+function getColorMap(flavor: DraculaPalettes): Record<ColorName, string> {
   return Object.fromEntries(palettes[flavor]) as Record<ColorName, string>
 }
 
@@ -17,7 +18,7 @@ function getColorMap(flavor: FlavorName): Record<ColorName, string> {
  * @param flavor flavor to pick Text color from
  * @returns flavored monochrome icon svg
  */
-export function monochromeIcon(svg: string, flavor: FlavorName) {
+export function monochromeIcon(svg: string, flavor: DraculaPalettes) {
   const colors = getColorMap(flavor)
   return svg.replaceAll(
     /var\(--vscode-ctp-\w+\)/g,
@@ -31,7 +32,7 @@ export function monochromeIcon(svg: string, flavor: FlavorName) {
  * @param flavor flavor to pick palette from
  * @returns flavored default icon svg
  */
-export function defaultIcon(svg: string, flavor: FlavorName) {
+export function defaultIcon(svg: string, flavor: DraculaPalettes) {
   const colors = getColorMap(flavor)
   return svg.replaceAll(
     /var\(--vscode-ctp-\w+\)/g,
@@ -46,7 +47,7 @@ export function defaultIcon(svg: string, flavor: FlavorName) {
  * @param config config to pick options from
  * @returns flavored default icon svg
  */
-export function compileIcon(svg: string, flavor: FlavorName, config: Partial<IconsConfig>) {
+export function compileIcon(svg: string, flavor: DraculaPalettes, config: Partial<IconsConfig>) {
   const { monochrome } = defu(config, {
     monochrome: defaultConfig.monochrome,
   })
