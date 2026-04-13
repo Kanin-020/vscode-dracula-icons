@@ -58,7 +58,9 @@
 &nbsp;
 
 <p align="center">
-  Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
+ Copyright (c) 2023 Catppuccin<br>
+ Copyright (c) 2023 thang-nm<br>
+ Copyright (c) 2026 kanin-020<br>
 </p>
 
 <p align="center">
