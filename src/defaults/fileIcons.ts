@@ -358,6 +358,9 @@ const fileIcons: FileIcons = {
       '.buckconfig',
     ],
   },
+  'buildkite': {
+    fileNames: ['buildkite.yml', 'buildkite.yaml'],
+  },
   'bun-lock': {
     fileNames: ['bun.lock', 'bun.lockb'],
   },
@@ -382,6 +385,12 @@ const fileIcons: FileIcons = {
   'caddy': {
     fileExtensions: ['caddyfile'],
     fileNames: ['caddyfile'],
+  },
+  'cadence': {
+    fileExtensions: ['cdc'],
+  },
+  'cakephp': {
+    fileNames: ['bin/cake'],
   },
   'capacitor': {
     fileNames: [
@@ -416,6 +425,9 @@ const fileIcons: FileIcons = {
       'changes.txt',
     ],
   },
+  'chromium': {
+    fileExtensions: ['crx'],
+  },
   'circle-ci': {
     fileNames: ['circle.yml'],
   },
@@ -425,6 +437,12 @@ const fileIcons: FileIcons = {
       'clj',
       'cljs',
       'cljc',
+    ],
+  },
+  'cmake-in': {
+    fileExtensions: [
+      'cmake.in',
+      'mk.in',
     ],
   },
   'cmake': {
