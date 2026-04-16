@@ -2881,6 +2881,13 @@ const fileIcons: FileIcons = {
   'vapi': {
     fileExtensions: ['vapi'],
   },
+  'velocity': {
+    fileExtensions: [
+      'vm',
+      'fhtml',
+      'vtl',
+    ],
+  },
   'vento': {
     fileExtensions: ['vto'],
   },
@@ -3030,8 +3037,19 @@ const fileIcons: FileIcons = {
     languageIds: ['vue'],
     fileExtensions: ['vue'],
   },
+  'wallaby': {
+    fileNames: [
+      'wallaby.js',
+      'wallaby.conf.js',
+    ],
+  },
   'wally': {
     fileNames: ['wally.toml', 'wally.lock'],
+  },
+  'watchman': {
+    fileNames: [
+      '.watchmanconfig',
+    ],
   },
   'web-assembly': {
     fileExtensions: [
@@ -3230,6 +3248,11 @@ const fileIcons: FileIcons = {
     ],
     fileExtensions: ['windi'],
   },
+  'wolfram': {
+    fileExtensions: [
+      'wl',
+    ],
+  },
   'workflow': {
     languageIds: ['github-actions-workflow'],
     fileExtensions: [
@@ -3260,6 +3283,13 @@ const fileIcons: FileIcons = {
     fileExtensions: [
       'xcsettings',
       'xcworkspacedata',
+    ],
+  },
+  'xib': {
+    fileExtensions: [
+      'xib',
+      'nib',
+      'storyboard',
     ],
   },
   'xmake': {

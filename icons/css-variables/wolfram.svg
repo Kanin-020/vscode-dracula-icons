@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+	<g fill="none" fill-rule="evenodd">
+		<circle cx="8" cy="8" r="6.5" stroke="var(--vscode-ctp-red)" />
+		<path stroke="var(--vscode-ctp-red)" stroke-linecap="square" d="M3 11 5 6 7 3 8 6 13 9.5 12 10.5 5 10 6 9 5 8.5M11 13.5 8.5 10.5" />
+		<path stroke="var(--vscode-ctp-red)" stroke-linecap="square" d="M8 5 9.5 3.5 9.5 6.5" />
+		<path fill="var(--vscode-ctp-red)" d="M8 8H9V9H8z" />
+	</g>
+</svg>
