@@ -712,6 +712,19 @@ const fileIcons: FileIcons = {
   'diff': {
     languageIds: ['diff'],
   },
+  'disc': {
+    fileExtensions: [
+      'iso',
+      'vcd',
+      'cue',
+      'dmg',
+      'hdd',
+      'vmdk',
+      'qcow',
+      'qcow2',
+      'qed',
+    ],
+  },
   'django': {
     languageIds: [
       'django-html',
@@ -850,6 +863,13 @@ const fileIcons: FileIcons = {
       'docusaurus.config.ts',
     ],
   },
+  'dotjs': {
+    fileExtensions: [
+      'def',
+      'dot',
+      'jst',
+    ],
+  },
   'drawio': {
     fileExtensions: [
       'drawio',
@@ -941,6 +961,12 @@ const fileIcons: FileIcons = {
   'envrc': {
     fileNames: ['.envrc'],
   },
+  'epub': {
+    fileExtensions: [
+      'epub',
+      'epub3',
+    ],
+  },
   'erlang': {
     languageIds: ['erlang'],
     fileExtensions: ['erl'],
@@ -1014,6 +1040,11 @@ const fileIcons: FileIcons = {
       'firestore.indexes.json',
     ],
   },
+  'flow': {
+    fileNames: [
+      '.flowconfig',
+    ],
+  },
   'flutter': {
     fileNames: [
       '.flutter-plugins',
@@ -1044,6 +1075,13 @@ const fileIcons: FileIcons = {
     fileNames: [
       'foreman.toml',
       'aftman.toml',
+    ],
+  },
+  'forth': {
+    fileExtensions: [
+      '4th',
+      'fth',
+      'frt',
     ],
   },
   'fortran': {

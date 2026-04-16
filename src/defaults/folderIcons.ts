@@ -499,7 +499,10 @@ const folderIcons: FolderIcons = {
     folderNames: ['nix'],
   },
   'node': {
-    folderNames: ['node_modules'],
+    folderNames: [
+      'node_modules',
+      'node',
+    ],
   },
   'nuxt': {
     folderNames: [
