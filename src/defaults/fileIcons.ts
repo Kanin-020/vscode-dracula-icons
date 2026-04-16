@@ -459,6 +459,21 @@ const fileIcons: FileIcons = {
       'cbl',
     ],
   },
+  'cocoapods-lock': {
+    fileNames: [
+      'podfile.lock',
+    ],
+  },
+  'cocoapods': {
+    fileNames: [
+      'podfile',
+    ],
+  },
+  'coconut': {
+    fileExtensions: [
+      'coco',
+    ],
+  },
   'code-climate': {
     fileNames: ['.codeclimate.yml'],
   },
@@ -467,6 +482,12 @@ const fileIcons: FileIcons = {
       'code_of_conduct.md',
       'code_of_conduct.txt',
       'code_of_conduct',
+    ],
+  },
+  'codecov': {
+    fileNames: [
+      '.codecov.yml',
+      'codecov.yml',
     ],
   },
   'codeowners': {
@@ -664,6 +685,15 @@ const fileIcons: FileIcons = {
     fileNames: [
       'dependabot.yml',
       'dependabot.yaml',
+    ],
+  },
+  'detox': {
+    fileNames: [
+      '.detoxrc',
+      '.detoxrc.js',
+      '.detoxrc.json',
+      'detox.config.js',
+      'detox.config.json',
     ],
   },
   'devcontainer': {
