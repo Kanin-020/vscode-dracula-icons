@@ -837,6 +837,9 @@ const folderIcons: FolderIcons = {
       'svgs',
     ],
   },
+  'symlink': {
+    folderNames: ['symlink', 'symlinks', '.symlink'],
+  },
   'task': {
     folderNames: ['task', 'tasks'],
   },

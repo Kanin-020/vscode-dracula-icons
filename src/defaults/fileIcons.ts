@@ -2958,6 +2958,10 @@ const fileIcons: FileIcons = {
   'swiftformat': {
     fileNames: ['.swiftformat'],
   },
+  'symlink': {
+    fileNames: ['symlink'],
+    fileExtensions: ['lnk'],
+  },
   'syncpack': {
     fileNames: [
       '.syncpackrc',
