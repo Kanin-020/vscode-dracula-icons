@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+	<g fill="none" fill-rule="evenodd">
+		<path stroke="var(--vscode-ctp-text)" stroke-linecap="square" stroke-linejoin="round" d="M2 8.5 2.5 10.5 4 11.5 7 11 8 9.5 9 11 12 11.5 13.5 10.5 14 8.5" />
+		<path stroke="var(--vscode-ctp-red)" stroke-linejoin="round" d="M6 2.5 10 2.5M8 2.5 8 6" />
+		<path stroke="var(--vscode-ctp-text)" d="M5 9.5 6 9.5M10 9.5 11 9.5" />
+		<path stroke="var(--vscode-ctp-text)" stroke-linecap="square" d="M1.5,8.5 C2.5,13.1666667 4.66666667,15.5 8,15.5 C11.3333333,15.5 13.5,13.1666667 14.5,8.5" />
+		<path stroke="var(--vscode-ctp-peach)" stroke-linecap="square" stroke-linejoin="round" d="M2,4.5 C3.33333333,1.83333333 5.33333333,0.5 8,0.5 C10.6666667,0.5 12.6666667,1.83333333 14,4.5 L15.5,5.5 L15.5,8 C13.5,7.66666667 11,7.5 8,7.5 C5,7.5 2.5,7.66666667 0.5,8 L0.5,5.5 L2,4.5 Z" />
+		<path stroke="var(--vscode-ctp-red)" stroke-linecap="round" stroke-linejoin="round" d="M1.5 13.5 3 14 6.5 12.5 8 12.5 9.5 12.5 13 14 14.5 13.5" />
+	</g>
+</svg>

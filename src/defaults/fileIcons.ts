@@ -2732,6 +2732,9 @@ const fileIcons: FileIcons = {
     languageIds: ['plaintext'],
     fileExtensions: ['txt'],
   },
+  'tldraw': {
+    fileExtensions: ['tldr'],
+  },
   'todo': {
     fileExtensions: ['todo'],
     fileNames: [
@@ -2742,6 +2745,12 @@ const fileIcons: FileIcons = {
   'toml': {
     languageIds: ['toml'],
     fileExtensions: ['toml'],
+  },
+  'travis': {
+    fileNames: ['.travis.yml'],
+  },
+  'tree': {
+    fileExtensions: ['tree'],
   },
   'turbo': {
     fileNames: [
@@ -2841,6 +2850,15 @@ const fileIcons: FileIcons = {
     fileExtensions: ['typ'],
     fileNames: ['typst.toml'],
   },
+  'uml': {
+    fileExtensions: [
+      'iuml',
+      'pu',
+      'puml',
+      'plantuml',
+      'wsd',
+    ],
+  },
   'unity': {
     languageIds: ['shaderlab'],
     fileExtensions: ['unity'],
@@ -2870,6 +2888,9 @@ const fileIcons: FileIcons = {
       'vpkg.json',
       'v.mod',
     ],
+  },
+  'vagrant': {
+    fileExtensions: ['vagrantfile'],
   },
   'vala': {
     languageIds: ['vala'],
