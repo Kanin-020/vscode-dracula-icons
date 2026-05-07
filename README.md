@@ -5,10 +5,9 @@
 </h3>
 
 <p align="center">
-  <img src="https://img.shields.io/github/directory-file-count/thang-nm/Catppuccin-Perfect-Icons/src/icons?label=icons&colorA=363a4f&colorB=eed49f&style=for-the-badge">
-    <img src="https://img.shields.io/badge/theme combinations-8-_?colorA=363a4f&colorB=a6da95&style=for-the-badge">
+  <img src="https://img.shields.io/badge/icons-842-_?colorA=363a4f&colorB=EED49F&style=for-the-badge">
+  <img src="https://img.shields.io/badge/theme combinations-8-_?colorA=363a4f&colorB=a6da95&style=for-the-badge">
   <img src="https://img.shields.io/badge/palettes-8-_?colorA=363a4f&colorB=b7bdf8&style=for-the-badge">
-
 </p>
 
 <p align="center">
