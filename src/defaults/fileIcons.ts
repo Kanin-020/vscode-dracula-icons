@@ -2497,6 +2497,9 @@ const fileIcons: FileIcons = {
   'quasar': {
     fileNames: ['quasar.conf.js', 'quasar.config.js'],
   },
+  'qwik': {
+    fileNames: ['qwik.config.ts'],
+  },
   'r': {
     languageIds: [
       'r',
@@ -2587,6 +2590,9 @@ const fileIcons: FileIcons = {
   },
   'rocket': {
     fileNames: ['rocket.toml'],
+  },
+  'rojo': {
+    fileNames: ['rojo.json', 'default.project.json'],
   },
   'rokit': {
     fileNames: ['rokit.toml'],
