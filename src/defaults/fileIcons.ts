@@ -1078,6 +1078,7 @@ const fileIcons: FileIcons = {
     ],
   },
   'forth': {
+    languageIds: ['forth'],
     fileExtensions: [
       '4th',
       'fth',
