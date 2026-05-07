@@ -2395,6 +2395,12 @@ const fileIcons: FileIcons = {
   'rsml': {
     fileExtensions: ['rsml'],
   },
+  'rspec': {
+    fileNames: ['.rspec'],
+  },
+  'rubocop': {
+    fileNames: ['.rubocop.yml', '.rubocop-todo.yml', '.rubocop_todo.yml'],
+  },
   'ruby-gem-lock': {
     fileNames: ['gemfile.lock'],
   },
@@ -2483,6 +2489,9 @@ const fileIcons: FileIcons = {
   'sentry': {
     fileNames: ['.sentryclirc'],
   },
+  'sequelize': {
+    fileNames: ['.sequelizerc'],
+  },
   'serverless': {
     fileNames: [
       'serverless.yml',
@@ -2540,9 +2549,28 @@ const fileIcons: FileIcons = {
   'sketch': {
     fileExtensions: ['sketch'],
   },
+  'slide': {
+    fileExtensions: [
+      'pptx',
+      'ppt',
+      'pptm',
+      'potx',
+      'potm',
+      'ppsx',
+      'ppsm',
+      'pps',
+      'ppam',
+      'ppa',
+      'odp',
+    ],
+  },
   'slidesk': {
     languageIds: ['sdf'],
     fileExtensions: ['sdf', 'sdt'],
+  },
+  'slim': {
+    languageIds: ['slim'],
+    fileExtensions: ['slim'],
   },
   'smarty': {
     languageIds: ['smarty'],
