@@ -895,6 +895,18 @@ const fileIcons: FileIcons = {
   'ejs': {
     fileExtensions: ['ejs'],
   },
+  'electron': {
+    fileNames: [
+      'electron-builder.json',
+      'electron-forge.json',
+      'electron-builder.yml',
+      'electron-forge.yml',
+      'main.js',
+      'preload.js',
+      'main.ts',
+      'preload.ts',
+    ],
+  },
   'eleventy': {
     fileNames: [
       '.eleventy.js',
