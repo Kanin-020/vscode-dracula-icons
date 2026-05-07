@@ -2544,6 +2544,10 @@ const fileIcons: FileIcons = {
     languageIds: ['sdf'],
     fileExtensions: ['sdf', 'sdt'],
   },
+  'smarty': {
+    languageIds: ['smarty'],
+    fileExtensions: ['tpl'],
+  },
   'snowpack': {
     fileNames: [
       'snowpack.config.js',
@@ -2576,6 +2580,10 @@ const fileIcons: FileIcons = {
   },
   'stackblitz': {
     fileNames: ['.stackblitzrc'],
+  },
+  'stan': {
+    languageIds: ['stan'],
+    fileExtensions: ['stan'],
   },
   'stata': {
     fileExtensions: ['ado', 'do', 'dta'],
@@ -2675,12 +2683,28 @@ const fileIcons: FileIcons = {
     languageIds: ['svg'],
     fileExtensions: ['svg'],
   },
+  'swagger': {
+    fileExtensions: ['swagger.json', 'swagger.yml', 'swagger.yaml'],
+    fileNames: ['swagger.json', 'swagger.yml', 'swagger.yaml'],
+  },
   'swift': {
     languageIds: ['swift'],
     fileExtensions: ['swift'],
   },
   'swiftformat': {
     fileNames: ['.swiftformat'],
+  },
+  'syncpack': {
+    fileNames: [
+      '.syncpackrc',
+      'syncpackrc.json',
+      '.syncpackrc.yaml',
+      '.syncpackrc.yml',
+      '.syncpackrc.js',
+      '.syncpackrc.cjs',
+      'syncpack.config.js',
+      'syncpack.config.cjs',
+    ],
   },
   'tailwind': {
     fileNames: [
@@ -2732,6 +2756,15 @@ const fileIcons: FileIcons = {
   'text': {
     languageIds: ['plaintext'],
     fileExtensions: ['txt'],
+  },
+  'textlint': {
+    fileNames: [
+      '.textlintrc',
+      '.textlintrc.js',
+      '.textlintrc.json',
+      '.textlintrc.yml',
+      '.textlintrc.yaml',
+    ],
   },
   'tldraw': {
     fileExtensions: ['tldr'],
