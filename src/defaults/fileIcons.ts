@@ -3327,6 +3327,9 @@ const fileIcons: FileIcons = {
     ],
   },
   'vs-codium': {
+    fileNames: [
+      '.vscodium.json',
+    ],
   },
   'vscode-ignore': {
     fileNames: ['.vscodeignore'],

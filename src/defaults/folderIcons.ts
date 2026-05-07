@@ -20,7 +20,10 @@ const folderIcons: FolderIcons = {
     ],
   },
   'android': {
-    folderNames: ['android'],
+    folderNames: ['android', 'apk'],
+  },
+  'angular': {
+    folderNames: ['angular', '.angular'],
   },
   'animation': {
     folderNames: [
@@ -42,6 +45,28 @@ const folderIcons: FolderIcons = {
     folderNames: [
       'app',
       'apps',
+      'application',
+      'project',
+      'projects',
+    ],
+  },
+  'archive': {
+    folderNames: [
+      'arc',
+      'arcs',
+      'archive',
+      'archives',
+      'archival',
+      'bkp',
+      'bkps',
+      'bak',
+      'baks',
+      'backup',
+      'backups',
+      'back-up',
+      'back-ups',
+      'history',
+      'histories',
     ],
   },
   'assets': {
@@ -104,6 +129,14 @@ const folderIcons: FolderIcons = {
       '.cargo',
     ],
   },
+  'cart': {
+    folderNames: [
+      'cart',
+      'shopping-cart',
+      'shopping',
+      'shop',
+    ],
+  },
   'circle-ci': {
     folderNames: ['.circleci'],
   },
@@ -118,6 +151,11 @@ const folderIcons: FolderIcons = {
   },
   'cloud': {
     folderNames: ['cloud'],
+  },
+  'cocoapods': {
+    folderNames: [
+      'pods',
+    ],
   },
   'command': {
     folderNames: [
@@ -210,6 +248,16 @@ const folderIcons: FolderIcons = {
       '__integration-tests__',
     ],
   },
+  'crontab': {
+    folderNames: [
+      'cron',
+      'crontab',
+      'cronjob',
+      'cronjobs',
+      'schedule',
+      'schedules',
+    ],
+  },
   'cursor': {
     folderNames: ['.cursor'],
   },
@@ -235,8 +283,14 @@ const folderIcons: FolderIcons = {
       'debugging',
     ],
   },
+  'decorators': {
+    folderNames: ['decorator', 'decorators'],
+  },
   'devcontainer': {
     folderNames: ['.devcontainer'],
+  },
+  'diff': {
+    folderNames: ['diff', 'diffs', 'patch', 'patches'],
   },
   'direnv': {
     folderNames: ['.direnv'],
@@ -283,6 +337,23 @@ const folderIcons: FolderIcons = {
   'drizzle-orm': {
     folderNames: ['drizzle'],
   },
+  'environment': {
+    folderNames: [
+      '.env',
+      '.environment',
+      'env',
+      'envs',
+      'environment',
+      'environments',
+      '.venv',
+    ],
+  },
+  'error': {
+    folderNames: ['error', 'errors', 'err'],
+  },
+  'event': {
+    folderNames: ['event', 'events'],
+  },
   'examples': {
     folderNames: [
       'demo',
@@ -294,14 +365,23 @@ const folderIcons: FolderIcons = {
       'sample-data',
     ],
   },
+  'expo': {
+    folderNames: ['.expo', '.expo-shared'],
+  },
   'fastlane': {
     folderNames: ['fastlane', '.fastlane'],
+  },
+  'favorite': {
+    folderNames: ['favorite', 'favorites', 'like', 'likes', 'heart', 'hearts'],
   },
   'firebase': {
     folderNames: [
       'firebase',
       '.firebase',
     ],
+  },
+  'flow': {
+    folderNames: ['flow-typed'],
   },
   'fonts': {
     folderNames: [
@@ -332,6 +412,9 @@ const folderIcons: FolderIcons = {
   'fvm': {
     folderNames: ['.fvm'],
   },
+  'gamemaker': {
+    folderNames: ['gamemaker', 'gamemaker2'],
+  },
   'git': {
     folderNames: [
       '.git',
@@ -351,11 +434,27 @@ const folderIcons: FolderIcons = {
   'gitlab': {
     folderNames: ['.gitlab'],
   },
+  'godot': {
+    folderNames: ['.godot', 'godot', '.godot-cpp', 'godot-cpp'],
+  },
   'gradle': {
     folderNames: ['gradle', '.gradle'],
   },
   'graphql': {
     folderNames: ['graphql', 'gql'],
+  },
+  'guard': {
+    folderNames: ['guard', 'guards'],
+  },
+  'gulp': {
+    folderNames: [
+      'gulp',
+      'gulp-tasks',
+      'gulpfile.js',
+      'gulpfile.mjs',
+      'gulpfile.ts',
+      'gulpfile.babel.js',
+    ],
   },
   'hooks': {
     folderNames: ['hook', 'hooks', 'trigger', 'triggers'],
@@ -404,6 +503,9 @@ const folderIcons: FolderIcons = {
   'intellij': {
     folderNames: ['.idea'],
   },
+  'ios': {
+    folderNames: ['ios'],
+  },
   'javascript': {
     folderNames: ['js', 'javascript'],
   },
@@ -434,6 +536,9 @@ const folderIcons: FolderIcons = {
       '.libraries',
     ],
   },
+  'link': {
+    folderNames: ['link', 'links', 'shortcut', 'shortcuts'],
+  },
   'linux': {
     folderNames: ['linux'],
   },
@@ -455,6 +560,9 @@ const folderIcons: FolderIcons = {
       '.tx',
     ],
   },
+  'lottie': {
+    folderNames: ['lottie', 'lotties', 'lottiefiles'],
+  },
   'luau': {
     folderNames: ['luau_packages'],
   },
@@ -464,6 +572,12 @@ const folderIcons: FolderIcons = {
   'macos': {
     folderNames: ['mac', 'macos'],
   },
+  'mail': {
+    folderNames: ['mail', 'mails', 'email', 'emails', 'smtp', 'mailer', 'mailers', 'phpmailer'],
+  },
+  'markdown': {
+    folderNames: ['md', 'markdown', 'markdowns'],
+  },
   'messages': {
     folderNames: ['message', 'messages'],
   },
@@ -472,6 +586,12 @@ const folderIcons: FolderIcons = {
       'middleware',
       'middlewares',
     ],
+  },
+  'mjml': {
+    folderNames: ['mjml'],
+  },
+  'mobile': {
+    folderNames: ['mobile', 'mobiles', 'phone', 'phones'],
   },
   'mocks': {
     folderNames: [
@@ -489,8 +609,14 @@ const folderIcons: FolderIcons = {
       'sketches',
     ],
   },
+  'mojo': {
+    folderNames: ['mojo'],
+  },
   'moonrepo': {
     folderNames: ['.moon'],
+  },
+  'netlify': {
+    folderNames: ['.netlify'],
   },
   'next': {
     folderNames: ['.next'],
@@ -520,8 +646,20 @@ const folderIcons: FolderIcons = {
       'crates',
     ],
   },
+  'pdf': {
+    folderNames: ['pdf', 'pdfs'],
+  },
+  'pdm': {
+    folderNames: ['.pdm-plugins', '.pdm-build'],
+  },
   'pesde': {
     folderNames: ['.pesde', 'pesde'],
+  },
+  'php': {
+    folderNames: ['php'],
+  },
+  'playground': {
+    folderNames: ['playground', 'playgrounds'],
   },
   'plugins': {
     folderNames: [
@@ -548,6 +686,9 @@ const folderIcons: FolderIcons = {
   'private': {
     folderNames: ['private'],
   },
+  'project': {
+    folderNames: ['project', 'projects', '.project', '.projects'],
+  },
   'proto': {
     folderNames: [
       'protobuf',
@@ -569,6 +710,9 @@ const folderIcons: FolderIcons = {
       'browsers',
     ],
   },
+  'python': {
+    folderNames: ['python', 'python2', 'python3', '.pytest_cache', '__pycache__'],
+  },
   'queue': {
     folderNames: [
       'queue',
@@ -586,17 +730,36 @@ const folderIcons: FolderIcons = {
       'renovate',
     ],
   },
+  'resource': {
+    folderNames: ['res', 'resource', 'resources', 'static'],
+  },
+  'review': {
+    folderNames: ['review', 'reviews', 'revisal', 'revisals', 'reviewed'],
+  },
   'roblox': {
     folderNames: [
       'roblox_packages',
       'roblox_server_packages',
     ],
   },
+  'root': {
+    folderNames: ['root', '.root'],
+  },
   'routes': {
     folderNames: [
       'routes',
       'router',
       'routers',
+    ],
+  },
+  'rules': {
+    folderNames: [
+      'rule',
+      'rules',
+      'validation',
+      'validations',
+      'validator',
+      'validators',
     ],
   },
   'sass': {
@@ -624,6 +787,9 @@ const folderIcons: FolderIcons = {
       'backend',
     ],
   },
+  'shader': {
+    folderNames: ['glsl', 'hlsl', 'shader', 'shaders'],
+  },
   'shared': {
     folderNames: [
       'share',
@@ -638,6 +804,9 @@ const folderIcons: FolderIcons = {
       'sources',
       'code',
     ],
+  },
+  'stencil': {
+    folderNames: ['stencil', '.stencil'],
   },
   'storybook': {
     folderNames: [
@@ -656,11 +825,20 @@ const folderIcons: FolderIcons = {
       'styles',
     ],
   },
+  'supabase': {
+    folderNames: ['supabase', '.supabase'],
+  },
+  'svelte': {
+    folderNames: ['svelte', '.svelte-kit'],
+  },
   'svg': {
     folderNames: [
       'svg',
       'svgs',
     ],
+  },
+  'task': {
+    folderNames: ['task', 'tasks'],
   },
   'tauri': {
     folderNames: ['src-tauri'],
@@ -681,6 +859,9 @@ const folderIcons: FolderIcons = {
       'template',
       'templates',
     ],
+  },
+  'terraform': {
+    folderNames: ['terraform', '.terraform'],
   },
   'tests': {
     folderNames: [
@@ -712,7 +893,14 @@ const folderIcons: FolderIcons = {
       'typings',
       '@types',
       'types',
+      'dto',
     ],
+  },
+  'typescript': {
+    folderNames: ['typescript', 'ts'],
+  },
+  'unity': {
+    folderNames: ['unity'],
   },
   'upload': {
     folderNames: [
@@ -764,8 +952,17 @@ const folderIcons: FolderIcons = {
       '.vscode-test',
     ],
   },
+  'vue': {
+    folderNames: ['vue'],
+  },
+  'webpack': {
+    folderNames: ['.webpack', 'webpack'],
+  },
   'windows': {
     folderNames: ['windows'],
+  },
+  'wordpress': {
+    folderNames: ['.wordpress-org', 'wp-content'],
   },
   'workflows': {
     folderNames: [
