@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+	<g fill="none" fill-rule="evenodd" stroke="var(--vscode-ctp-yellow)">
+		<rect width="13" height="13" x="1.5" y="1.5" rx="2" />
+		<path stroke-linejoin="round" d="M8 10.5 5.649 11.736 6.098 9.118 4.196 7.264 6.824 6.882 8 4.5 9.176 6.882 11.804 7.264 9.902 9.118 10.351 11.736z" />
+	</g>
+</svg>

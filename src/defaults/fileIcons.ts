@@ -1110,6 +1110,9 @@ const fileIcons: FileIcons = {
       'fvm_config.json',
     ],
   },
+  'gamemaker': {
+    fileExtensions: ['gml', 'yy', 'yyp', 'yyz'],
+  },
   'gatsby': {
     fileNames: [
       'gatsby-config.js',
@@ -1161,6 +1164,9 @@ const fileIcons: FileIcons = {
       '.git-for-windows-updater',
       'git-history',
     ],
+  },
+  'gitbook': {
+    fileNames: ['.gitbook.yaml'],
   },
   'gitlab': {
     fileExtensions: [
@@ -1255,6 +1261,9 @@ const fileIcons: FileIcons = {
       'graphql.config.yml',
     ],
   },
+  'gridsome': {
+    fileNames: ['gridsome.config.js', 'gridsome.server.js'],
+  },
   'groovy': {
     languageIds: ['groovy'],
     fileExtensions: ['groovy'],
@@ -1268,6 +1277,9 @@ const fileIcons: FileIcons = {
       'gulpfile.mts',
       'gulpfile.babel.js',
     ],
+  },
+  'h': {
+    fileExtensions: ['h'],
   },
   'hacking': {
     fileNames: [
@@ -1308,6 +1320,9 @@ const fileIcons: FileIcons = {
     ],
     fileExtensions: ['hx'],
   },
+  'hcl': {
+    fileExtensions: ['hcl'],
+  },
   'helm': {
     fileNames: [
       '.helmignore',
@@ -1324,6 +1339,16 @@ const fileIcons: FileIcons = {
       '.histoire.js',
       '.histoire.ts',
     ],
+  },
+  'hjson': {
+    languageIds: ['hjson'],
+    fileExtensions: ['hjson'],
+  },
+  'hpp': {
+    fileExtensions: ['hh', 'hpp', 'hxx', 'h++', 'hp', 'tcc', 'inl'],
+  },
+  'htaccess': {
+    fileNames: ['.htaccess'],
   },
   'html': {
     languageIds: ['html'],
@@ -1364,6 +1389,12 @@ const fileIcons: FileIcons = {
       '.huskyrc.yaml',
       '.huskyrc.yml',
     ],
+  },
+  'i18n': {
+    fileExtensions: ['pot', 'po', 'mo', 'lang', 'strings'],
+  },
+  'icon': {
+    fileExtensions: ['ico', 'icns'],
   },
   'image': {
     fileExtensions: [
@@ -1483,6 +1514,10 @@ const fileIcons: FileIcons = {
       'mjs',
     ],
   },
+  'jenkins': {
+    fileExtensions: ['jenkinsfile', 'jenkins'],
+    fileNames: ['jenkinsfile'],
+  },
   'jest': {
     fileNames: [
       'jest.config.js',
@@ -1582,6 +1617,17 @@ const fileIcons: FileIcons = {
     fileExtensions: ['just'],
     fileNames: ['justfile', '.justfile'],
   },
+  'karma': {
+    fileNames: [
+      'karma.conf.js',
+      'karma.conf.ts',
+      'karma.conf.coffee',
+      'karma.config.js',
+      'karma.config.ts',
+      'karma-main.js',
+      'karma-main.ts',
+    ],
+  },
   'kdl': {
     languageIds: ['kdl'],
     fileExtensions: ['kdl'],
@@ -1597,6 +1643,9 @@ const fileIcons: FileIcons = {
       'keystore',
     ],
     fileNames: ['.htpasswd'],
+  },
+  'kivy': {
+    fileExtensions: ['kv'],
   },
   'knip': {
     fileNames: [
@@ -1614,6 +1663,16 @@ const fileIcons: FileIcons = {
     fileExtensions: [
       'kt',
       'kts',
+    ],
+  },
+  'kubernetes': {
+    fileNames: [
+      'k8s.yml',
+      'k8s.yaml',
+      'kubernetes.yml',
+      'kubernetes.yaml',
+      '.k8s.yml',
+      '.k8s.yaml',
     ],
   },
   'laravel': {
@@ -1691,6 +1750,18 @@ const fileIcons: FileIcons = {
       'licence.txt',
     ],
   },
+  'lighthouse': {
+    fileNames: [
+      '.lighthouserc.js',
+      'lighthouserc.js',
+      '.lighthouserc.json',
+      'lighthouserc.json',
+      '.lighthouserc.yml',
+      'lighthouserc.yml',
+      '.lighthouserc.yaml',
+      'lighthouserc.yaml',
+    ],
+  },
   'lint-staged': {
     fileNames: [
       '.lintstagedrc',
@@ -1724,9 +1795,19 @@ const fileIcons: FileIcons = {
       'fast',
     ],
   },
+  'literate': {
+    fileExtensions: ['lhs'],
+  },
+  'livescript': {
+    languageIds: ['livescript'],
+    fileExtensions: ['ls'],
+  },
   'log': {
     languageIds: ['log'],
     fileExtensions: ['log'],
+  },
+  'lottie': {
+    fileExtensions: ['lottie'],
   },
   'lua-check': {
     fileNames: ['.luacheckrc'],
@@ -1769,6 +1850,10 @@ const fileIcons: FileIcons = {
   'macos': {
     fileNames: ['.ds_store'],
   },
+  'mail': {
+    fileExtensions: ['.ics'],
+    fileNames: ['.mailmap'],
+  },
   'makefile': {
     languageIds: ['makefile'],
     fileExtensions: ['mk'],
@@ -1795,12 +1880,28 @@ const fileIcons: FileIcons = {
   'marko': {
     fileExtensions: ['marko'],
   },
+  'mathematica': {
+    fileExtensions: ['nb'],
+  },
   'matlab': {
     languageIds: ['matlab'],
     fileExtensions: ['m', 'mat'],
   },
+  'maven': {
+    fileExtensions: ['maven.config', 'jvm.config', 'pom.xml'],
+  },
   'mdbook': {
     fileNames: ['book.toml'],
+  },
+  'mercurial': {
+    fileNames: [
+      '.hg',
+      '.hgignore',
+      '.hgflow',
+      '.hgrc',
+      'hgrc',
+      'mercurial.ini',
+    ],
   },
   'mermaid': {
     fileExtensions: [
@@ -1815,12 +1916,28 @@ const fileIcons: FileIcons = {
     ],
     fileExtensions: ['wrap'],
   },
+  'metro': {
+    fileNames: ['metro.config.js', 'metro.config.ts'],
+  },
   'midi': {
     fileExtensions: ['mid', 'midi'],
+  },
+  'mint': {
+    fileExtensions: ['mint'],
   },
   'mjml': {
     fileExtensions: ['mjml'],
     fileNames: ['.mjmlconfig'],
+  },
+  'mocha': {
+    fileNames: [
+      'mocha.opts',
+      '.mocharc.yml',
+      '.mocharc.yaml',
+      '.mocharc.js',
+      '.mocharc.json',
+      '.mocharc.jsonc',
+    ],
   },
   'modernizr': {
     fileNames: [
@@ -1829,8 +1946,17 @@ const fileIcons: FileIcons = {
       '.modernizrrc.json',
     ],
   },
+  'mojo': {
+    fileExtensions: ['mojo', '🔥'],
+  },
+  'moon': {
+    fileNames: ['moon.yml'],
+  },
   'moonrepo': {
     fileNames: ['moon.yml', 'moon.yaml'],
+  },
+  'moonscript': {
+    fileExtensions: ['moon'],
   },
   'moonwave': {
     fileNames: ['moonwave.toml'],
@@ -2025,8 +2151,36 @@ const fileIcons: FileIcons = {
       'panda.config.cjs',
     ],
   },
+  'panda': {
+    fileNames: [
+      'panda.config.ts',
+      'panda.config.mjs',
+      'panda.config.js',
+    ],
+  },
+  'parse': {
+    fileNames: ['.parse.local', '.parse.project'],
+  },
+  'pawn': {
+    languageIds: ['pawn'],
+    fileExtensions: ['pwn', 'amx'],
+  },
+  'payload': {
+    fileNames: [
+      'payload.config.js',
+      'payload.config.mjs',
+      'payload.config.ts',
+      'payload.config.mts',
+    ],
+  },
   'pdf': {
     fileExtensions: ['pdf'],
+  },
+  'pdm-lock': {
+    fileNames: ['pdm.lock'],
+  },
+  'pdm': {
+    fileNames: ['pdm.toml', '.pdm-python'],
   },
   'perl': {
     languageIds: [
@@ -2056,9 +2210,32 @@ const fileIcons: FileIcons = {
   'pesde': {
     fileNames: ['pesde.toml'],
   },
+  'php-cs-fixer': {
+    fileNames: [
+      '.php_cs',
+      '.php_cs.dist',
+      '.php_cs.php',
+      '.php_cs.dist.php',
+      '.php-cs-fixer.php',
+      '.php-cs-fixer.dist.php',
+    ],
+  },
   'php': {
     languageIds: ['php'],
     fileExtensions: ['php'],
+  },
+  'phpstan': {
+    fileNames: ['phpstan.neon', 'phpstan.neon.dist', 'phpstan.dist.neon'],
+  },
+  'phpunit': {
+    fileNames: [
+      '.phpunit.result.cache',
+      '.phpunit-watcher.yml',
+      'phpunit.xml',
+      'phpunit.xml.dist',
+      'phpunit-watcher.yml',
+      'phpunit-watcher.yml.dist',
+    ],
   },
   'phrase': {
     fileNames: [
@@ -2071,6 +2248,9 @@ const fileIcons: FileIcons = {
   'phtml': {
     fileExtensions: ['phtml'],
   },
+  'pinejs': {
+    fileExtensions: ['pine'],
+  },
   'pixi-lock': {
     fileNames: ['pixi.lock'],
   },
@@ -2079,6 +2259,15 @@ const fileIcons: FileIcons = {
   },
   'plantuml': {
     fileExtensions: ['pu', 'puml', 'plantuml'],
+  },
+  'plastic': {
+    fileNames: [
+      'plastic.branchexplorer',
+      'plastic.selector',
+      'plastic.wktree',
+      'plastic.workspace',
+      'plastic.workspaces',
+    ],
   },
   'playwright': {
     fileNames: [
@@ -2134,6 +2323,15 @@ const fileIcons: FileIcons = {
       '.postcssrc.json',
       '.postcssrc.yaml',
       '.postcssrc.yml',
+    ],
+  },
+  'posthtml': {
+    fileNames: [
+      'posthtml.config.js',
+      '.posthtmlrc.js',
+      '.posthtmlrc',
+      '.posthtmlrc.json',
+      '.posthtmlrc.yml',
     ],
   },
   'powershell': {
@@ -2196,6 +2394,10 @@ const fileIcons: FileIcons = {
       'prisma.yml',
     ],
     fileExtensions: ['prisma'],
+  },
+  'processing': {
+    languageIds: ['processing'],
+    fileExtensions: ['pde'],
   },
   'prolog': {
     languageIds: ['prolog'],
@@ -2276,9 +2478,24 @@ const fileIcons: FileIcons = {
       '.python-version',
     ],
   },
+  'python-misc': {
+    fileExtensions: ['whl'],
+    fileNames: [
+      'requirements.txt',
+      'pipfile',
+      '.python-version',
+      'manifest.in',
+      'pylintrc',
+      '.pylintrc',
+      'pyproject.toml',
+    ],
+  },
   'python': {
     languageIds: ['python'],
     fileExtensions: ['py'],
+  },
+  'quasar': {
+    fileNames: ['quasar.conf.js', 'quasar.config.js'],
   },
   'r': {
     languageIds: [
@@ -2345,9 +2562,19 @@ const fileIcons: FileIcons = {
       'renovate.json5',
     ],
   },
+  'replit': {
+    fileNames: ['.replit'],
+  },
   'rescript': {
     languageIds: ['rescript'],
     fileExtensions: ['res'],
+  },
+  'restql': {
+    fileExtensions: ['rql', 'restql'],
+  },
+  'riot': {
+    languageIds: ['riot'],
+    fileExtensions: ['riot'],
   },
   'rmd': {
     fileExtensions: ['rmd'],
@@ -2388,6 +2615,9 @@ const fileIcons: FileIcons = {
       'rollup.config.prod.vendor.mjs',
       'rollup.config.prod.vendor.ts',
     ],
+  },
+  'rome': {
+    fileNames: ['rome.json'],
   },
   'rproj': {
     fileExtensions: ['rproj'],

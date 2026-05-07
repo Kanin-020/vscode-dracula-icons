@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+	<g fill="none" fill-rule="evenodd" stroke="var(--vscode-ctp-mauve)">
+		<path d="M10.5,2 L10.5,12.25 M12.0014576,13.196994 L3.00235586,8.00136016 M1.50118324,8.86534226 L10.4968795,3.67167461" />
+		<path stroke-linejoin="round" d="M7.5 0 13.995 3.75 13.995 11.25 7.5 15 1.005 11.25 1.005 3.75z" transform="translate(.5 .5)" />
+	</g>
+</svg>
