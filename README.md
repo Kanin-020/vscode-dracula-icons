@@ -49,6 +49,25 @@
   <img src="assets/draculaProAlucard.webp"/>
 </details>
 
+## How to build
+
+1. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+
+2. **(Optional)** If you have Dracula Pro, copy the `env.dracula-pro-palette` template to `.env` and fill in the corresponding colors.
+
+3. Generate the icons:
+   ```bash
+   pnpm run icons
+   ```
+
+4. Build the extension:
+   ```bash
+   pnpm run build
+   ```
+
 ## 💝 Thanks to
 - [zenorocha](https://github.com/zenorocha)
 - [PraZ](https://github.com/prazdevs)
